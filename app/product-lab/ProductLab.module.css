@@ -71,6 +71,12 @@
     color: #4b5563;
 }
 
+.status.cooking {
+    background-color: #fff7ed;
+    /* Orange-ish/Yellow for cooking */
+    color: #c2410c;
+}
+
 .category {
     color: var(--text-secondary);
 }
@@ -84,4 +90,46 @@
 .cardSummary {
     color: var(--text-secondary);
     line-height: 1.6;
+}
+
+.highlightLive {
+    color: #166534;
+    font-weight: 500;
+}
+
+.highlightCooking {
+    color: #c2410c;
+    font-weight: 500;
+}
+
+.ctaSection {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-md);
+    background: var(--gray-light);
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.ctaSection h3 {
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.2rem;
+}
+
+.ctaSection p {
+    margin-bottom: var(--spacing-md);
+    color: var(--text-secondary);
+}
+
+.ctaButton {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: var(--foreground);
+    color: var(--background);
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.ctaButton:hover {
+    opacity: 0.9;
 }

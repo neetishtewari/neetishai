@@ -28,10 +28,10 @@ const SERVICES = [
     },
 ];
 
-export default function Services() {
+export default function Interests() {
     return (
         <div className={`container ${styles.servicesContainer}`}>
-            <h1 className={styles.title}>Services</h1>
+            <h1 className={styles.title}>Interests</h1>
             <p className={styles.intro}>
                 Practical AI implementation for teams who want to build, not just talk.
             </p>

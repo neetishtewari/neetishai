@@ -11,25 +11,19 @@ export default function Contact() {
             </p>
 
             <div className={styles.grid}>
-                <div className={styles.formSection}>
-                    <form className={styles.form}>
-                        <div className={styles.field}>
-                            <label htmlFor="name" className={styles.label}>Name</label>
-                            <input type="text" id="name" name="name" className={styles.input} placeholder="Your name" />
-                        </div>
-
-                        <div className={styles.field}>
-                            <label htmlFor="email" className={styles.label}>Email</label>
-                            <input type="email" id="email" name="email" className={styles.input} placeholder="your@email.com" />
-                        </div>
-
-                        <div className={styles.field}>
-                            <label htmlFor="message" className={styles.label}>Message</label>
-                            <textarea id="message" name="message" className={styles.textarea} placeholder="What's on your mind?" rows={5} />
-                        </div>
-
-                        <button type="submit" className={styles.submitButton}>Send Message</button>
-                    </form>
+                <div className={styles.bookingSection}>
+                    <h2>Book a time</h2>
+                    <p>
+                        The easiest way to connect is to grab a 30-minute slot on my calendar.
+                    </p>
+                    <a
+                        href="https://calendly.com/neetish-tewari/30min"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.bookButton}
+                    >
+                        Schedule 30 mins ↗
+                    </a>
                 </div>
 
                 <div className={styles.connectSection}>

@@ -25,9 +25,9 @@ export default function Home() {
         <p className={styles.subtitle}>
           Helping teams turn AI ideas into clean, practical, scalable products.
         </p>
-        <Link href="/contact" className={styles.cta}>
+        <a href="https://calendly.com/neetish-tewari/30min" target="_blank" rel="noopener noreferrer" className={styles.cta}>
           Let&#39;s talk AI <span className={styles.arrow}>→</span>
-        </Link>
+        </a>
       </section>
 
       {/* Intro Section */}
