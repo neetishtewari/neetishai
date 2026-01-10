@@ -26,7 +26,7 @@ export default function Home() {
           Helping teams turn AI ideas into clean, practical, scalable products.
         </p>
         <a href="https://calendly.com/neetish-tewari/30min" target="_blank" rel="noopener noreferrer" className={styles.cta}>
-          Let&#39;s talk AI <span className={styles.arrow}>→</span>
+          Let&#39;s Talk <span className={styles.arrow}>→</span>
         </a>
       </section>
 
@@ -77,9 +77,31 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Live Feed Section - Moved INSIDE intro to be a grid sibling */}
         <div className={styles.liveFeedSection}>
           <LiveFeed />
+        </div>
+      </section>
+
+      {/* What I Help With Section */}
+      <section className={styles.offerings}>
+        <h2>What I Help With</h2>
+        <div className={styles.offeringsGrid}>
+          <div className={styles.offeringCard}>
+            <h3>AI Workshops</h3>
+            <p>Practical, hands-on sessions to help teams understand and apply AI to real business problems.</p>
+          </div>
+          <div className={styles.offeringCard}>
+            <h3>AI Audits</h3>
+            <p>A structured review of workflows, data, and tools to identify where AI and automation can deliver real ROI.</p>
+          </div>
+          <div className={styles.offeringCard}>
+            <h3>AI Product MVPs</h3>
+            <p>Helping founders and teams shape, prototype, and ship their first AI-powered product quickly.</p>
+          </div>
+          <div className={styles.offeringCard}>
+            <h3>AI Automation Projects</h3>
+            <p>Designing and building AI-driven automations across documents, operations, finance, and internal workflows.</p>
+          </div>
         </div>
       </section>
 
