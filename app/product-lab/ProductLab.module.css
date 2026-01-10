@@ -27,18 +27,26 @@
     }
 }
 
-.card {
-    display: block;
+.cardWrapper {
+    display: flex;
+    flex-direction: column;
     padding: var(--spacing-md);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
     background: var(--background);
     transition: all 0.2s ease;
+    height: 100%;
 }
 
-.card:hover {
+.cardWrapper:hover {
     transform: translateY(-2px);
     border-color: var(--foreground);
+}
+
+.card {
+    display: block;
+    flex: 1;
+    /* Take remaining space */
 }
 
 .header {
@@ -53,28 +61,45 @@
 .status {
     padding: 2px 8px;
     border-radius: var(--radius-sm);
-    font-weight: 600;
+    font-size: 0.7rem;
+    font-weight: 500;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .status.live {
-    background-color: #dcfce7;
+    border-color: #dcfce7;
+    background: transparent;
     color: #166534;
 }
 
-.status.prototype {
-    background-color: #fef9c3;
-    color: #854d0e;
-}
-
-.status.experiment {
-    background-color: #f3f4f6;
-    color: #4b5563;
-}
-
 .status.cooking {
-    background-color: #fff7ed;
-    /* Orange-ish/Yellow for cooking */
+    border-color: #ffedd5;
+    background: transparent;
     color: #c2410c;
+}
+
+.cardFooter {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--gray-light);
+}
+
+.githubLink {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.2s ease;
+}
+
+.githubLink:hover {
+    color: var(--foreground);
+    text-decoration: underline;
 }
 
 .category {
