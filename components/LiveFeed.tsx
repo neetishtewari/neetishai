@@ -23,11 +23,11 @@ export default async function LiveFeed() {
 
     // Interleave or stack items. 
     // Prioritize GitHub items as they are "live".
-    const allItems = [...githubItems, ...MANUAL_ITEMS].slice(0, 7);
+    const allItems = [...githubItems, ...MANUAL_ITEMS].slice(0, 4);
 
     return (
         <div className={styles.feedContainer}>
-            <h3 className={styles.heading}>Live Feed</h3>
+            <h3 className={styles.heading}>Recent activity</h3>
             <div className={styles.feed}>
                 {allItems.map((item) => (
                     <div key={item.id} className={styles.item}>

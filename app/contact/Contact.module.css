@@ -27,6 +27,12 @@
     }
 }
 
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
 .bookingSection {
     display: flex;
     flex-direction: column;
@@ -59,6 +65,106 @@
     opacity: 0.9;
 }
 
+/* Form Styles */
+.formSection {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--border);
+}
+
+.formSection h2 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.formIntro {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+    font-size: 0.95rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    max-width: 450px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.input,
+.textarea {
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 0.95rem;
+    background: var(--background);
+    transition: border-color 0.2s ease;
+}
+
+.input:focus,
+.textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.submitButton {
+    align-self: flex-start;
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--foreground);
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.submitButton:hover:not(:disabled) {
+    border-color: var(--foreground);
+    background: var(--gray-light);
+}
+
+.submitButton:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.successMessage {
+    background: #dcfce7;
+    color: #166534;
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+}
+
+.errorMessage {
+    color: #ef4444;
+    font-size: 0.9rem;
+}
+
+.resetButton {
+    background: none;
+    border: none;
+    text-decoration: underline;
+    color: inherit;
+    cursor: pointer;
+    margin-top: var(--spacing-sm);
+    font-size: 0.85rem;
+}
+
+/* Cleaned up styles */
 .connectSection h2 {
     font-size: 1.5rem;
     margin-bottom: var(--spacing-md);

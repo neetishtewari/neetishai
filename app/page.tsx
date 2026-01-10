@@ -105,6 +105,25 @@ export default function Home() {
         </div>
       </section>
 
-    </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            name: 'Neetish Tewari',
+            url: 'https://neetish.ai', // Update with actual domain if known
+            image: 'https://neetish.ai/neetish.jpg',
+            jobTitle: 'AI Product Expert',
+            sameAs: [
+              'https://www.linkedin.com/in/neetish/',
+              'https://x.com/neetish',
+              'https://github.com/neetishtewari',
+            ],
+            description: 'AI Product Expert helping teams turn AI ideas into clean, practical, scalable products.',
+          }),
+        }}
+      />
+    </div >
   );
 }
