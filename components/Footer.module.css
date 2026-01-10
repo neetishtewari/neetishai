@@ -1,0 +1,32 @@
+.footer {
+    padding: var(--spacing-md) 0;
+    border-top: 1px solid var(--border);
+    margin-top: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.copyright {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.socials {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.socials a {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.socials a:hover {
+    color: var(--foreground);
+}

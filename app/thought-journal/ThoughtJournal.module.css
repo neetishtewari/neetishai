@@ -1,0 +1,60 @@
+.journalContainer {
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-xl);
+    max-width: 800px;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.intro {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-xl);
+}
+
+.feed {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.post {
+    display: block;
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--border);
+    transition: opacity 0.2s ease;
+}
+
+.post:hover {
+    opacity: 0.8;
+}
+
+.post:last-child {
+    border-bottom: none;
+}
+
+.meta {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xs);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.tag {
+    color: var(--accent);
+}
+
+.postTitle {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--foreground);
+}
+
+.excerpt {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}

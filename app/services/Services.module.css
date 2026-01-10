@@ -1,0 +1,87 @@
+.servicesContainer {
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-xl);
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.intro {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin-bottom: var(--spacing-xl);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.card {
+    padding: var(--spacing-md);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    transition: border-color 0.2s ease, transform 0.2s ease;
+    background: var(--background);
+}
+
+.card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--foreground);
+}
+
+.cardDesc {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+}
+
+.outcome {
+    font-size: 0.9rem;
+    color: var(--foreground);
+    padding-top: var(--spacing-sm);
+    border-top: 1px dashed var(--border);
+}
+
+.outcome strong {
+    color: var(--accent);
+}
+
+.ctaSection {
+    text-align: center;
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--border);
+}
+
+.ctaSection p {
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.1rem;
+}
+
+.cta {
+    font-weight: 500;
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.cta:hover {
+    color: var(--accent-hover);
+}

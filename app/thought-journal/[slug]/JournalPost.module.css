@@ -1,0 +1,53 @@
+.postContainer {
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-xl);
+    max-width: 700px;
+    /* Optimal reading width */
+}
+
+.backLink {
+    display: inline-block;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.date {
+    display: block;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-xs);
+    font-size: 0.9rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.content {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--foreground);
+}
+
+.content p {
+    margin-bottom: var(--spacing-md);
+}
+
+.content h2,
+.content h3 {
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer {
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-style: italic;
+}

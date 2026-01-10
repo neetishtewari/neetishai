@@ -1,66 +1,53 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from 'next/link';
+import Image from 'next/image';
+import LiveFeed from '@/components/LiveFeed';
+import styles from './page.module.css';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
+    <div className={`container ${styles.homeContainer}`}>
+
+      {/* Hero Section */}
+      <section className={styles.hero}>
+        <div className={styles.heroHeader}>
+          <Image
+            src="/neetish.jpg"
+            alt="Neetish"
+            width={80}
+            height={80}
+            className={styles.avatar}
+            priority
+          />
+          <h1 className={styles.title}>
+            AI Product Leader Turning Ideas into <span className={styles.highlight}>Scalable Tech Products</span> for High Growth Teams
+          </h1>
+        </div>
+        <p className={styles.subtitle}>
+          Helping teams turn AI ideas into clean, practical, scalable products.
+        </p>
+        <Link href="/contact" className={styles.cta}>
+          Let&#39;s talk AI <span className={styles.arrow}>→</span>
+        </Link>
+      </section>
+
+      {/* Intro Section */}
+      <section className={styles.intro}>
+        <div className={styles.introContent}>
+          <h2>Curiosity. Collaboration. Code.</h2>
           <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+            I build products that go from zero to revenue. I work with startups, global banks and large staffing companies to solve real problems with speed and clarity.
+          </p>
+          <p>
+            I have been obsessed with AI for the last five to six years, with a strong focus on generative and agentic AI in the last two to three years. I thrive in complex environments, turn ambiguity into clear product decisions and drive teams from first concept to launch. I focus on shipping products that scale, earn trust and create measurable impact.
           </p>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </section>
+
+      {/* Live Feed Section */}
+      <section className={styles.liveFeedSection}>
+        <LiveFeed />
+      </section>
+
     </div>
   );
 }
