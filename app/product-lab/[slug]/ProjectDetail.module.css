@@ -51,36 +51,66 @@
     font-weight: 500;
 }
 
+.contentGrid {
+    margin-bottom: var(--spacing-xl);
+}
+
 .section {
     margin-bottom: var(--spacing-lg);
 }
 
 .section h2 {
-    font-size: 1.5rem;
-    margin-bottom: var(--spacing-sm);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
     color: var(--foreground);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
 }
 
 .section p {
     font-size: 1.1rem;
-    line-height: 1.7;
+    line-height: 1.6;
     color: var(--text-secondary);
+    max-width: 65ch;
 }
 
 .cta {
     margin-top: var(--spacing-xl);
-    padding: var(--spacing-md);
-    background: var(--gray-light);
+    padding: var(--spacing-lg);
+    background: var(--background);
+    border: 1px solid var(--border);
     border-radius: var(--radius-md);
     text-align: center;
 }
 
 .cta h3 {
     font-size: 1.25rem;
-    margin-bottom: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
+    color: var(--foreground);
+    font-weight: 500;
 }
 
-.cta a {
+.ctaLink {
+    display: inline-flex;
+    align-items: center;
     color: var(--accent);
     font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+}
+
+.ctaLink:hover {
+    color: var(--accent-hover);
+}
+
+.arrow {
+    margin-left: 0.5rem;
+    transition: transform 0.2s ease;
+}
+
+.ctaLink:hover .arrow {
+    transform: translateX(4px);
 }
