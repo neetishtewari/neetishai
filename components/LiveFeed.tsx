@@ -1,6 +1,8 @@
 import styles from './LiveFeed.module.css';
 import { fetchGitHubActivity } from '@/lib/github';
+import { getAllPosts } from '@/lib/posts';
 
+// You can still keep manual items for Project launches or major updates that aren't posts/github commits
 const MANUAL_ITEMS = [
     {
         id: 'm1',
@@ -8,22 +10,26 @@ const MANUAL_ITEMS = [
         title: 'Launched "Auto-Feedback"',
         date: '2 days ago',
         description: 'An experiment in automated user feedback analysis using Gemini.',
-    },
-    {
-        id: 'm2',
-        type: 'Thought',
-        title: 'The future of small models',
-        date: '4 days ago',
-        description: 'Reflecting on the balance between latency and intelligence in edge AI.',
-    },
+    }
 ];
 
 export default async function LiveFeed() {
     const githubItems = await fetchGitHubActivity();
+    const posts = getAllPosts();
 
-    // Interleave or stack items. 
-    // Prioritize GitHub items as they are "live".
-    const allItems = [...githubItems, ...MANUAL_ITEMS].slice(0, 4);
+    // Transform posts into Feed Items
+    const postItems = posts.map(post => ({
+        id: `post-${post.slug}`,
+        type: 'Thought',
+        title: post.title,
+        date: post.date, // Note: In a real app, you'd parse dates to sort correctly. For now, assuming relatively recent.
+        description: post.excerpt,
+    }));
+
+    // Combine: GitHub + Posts + Manual
+    // In a real app, sort by actual Date object. 
+    // Here we just stack them: Posts (High Priority) -> Manual -> GitHub
+    const allItems = [...postItems, ...MANUAL_ITEMS, ...githubItems].slice(0, 4);
 
     return (
         <div className={styles.feedContainer}>
