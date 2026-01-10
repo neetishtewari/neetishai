@@ -106,6 +106,10 @@
     gap: var(--spacing-lg);
     align-items: start;
   }
+
+  .pillars {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .intro h2 {
@@ -119,6 +123,69 @@
   line-height: 1.7;
   color: var(--text-secondary);
   margin-bottom: var(--spacing-md);
+}
+
+.backgroundSection {
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border);
+}
+
+.backgroundSection h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+  opacity: 0.8;
+}
+
+.backgroundSection p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.pillars {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.pillar {
+  padding: var(--spacing-md);
+  background: var(--gray-light);
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.pillar:hover {
+  border-color: var(--border);
+  background: var(--background);
+}
+
+.pillarNumber {
+  display: block;
+  font-size: 0.8rem;
+  font-family: monospace;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
+}
+
+.pillar h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+}
+
+.pillar p {
+  font-size: 1rem;
+  margin-bottom: 0;
 }
 
 /* Live Feed Section */
