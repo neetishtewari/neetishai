@@ -2,8 +2,8 @@ import Link from 'next/link';
 import styles from './ThoughtJournal.module.css';
 import { getAllPosts } from '@/lib/posts';
 
-export default function ThoughtJournal() {
-    const posts = getAllPosts();
+export default async function ThoughtJournal() {
+    const posts = await getAllPosts();
 
     return (
         <div className={`container ${styles.journalContainer}`}>

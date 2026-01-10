@@ -8,7 +8,7 @@ type Props = {
 
 export default async function JournalPost({ params }: Props) {
     const { slug } = await params;
-    const post = getPostBySlug(slug);
+    const post = await getPostBySlug(slug);
 
     if (!post) {
         return (

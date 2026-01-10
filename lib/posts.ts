@@ -1,79 +1,54 @@
+import { createReader } from '@keystatic/core/reader';
+import keystaticConfig from '@/keystatic.config';
+import Markdoc from '@markdoc/markdoc';
+
+const reader = createReader(process.cwd(), keystaticConfig);
+
 export type Post = {
     slug: string;
     title: string;
     date: string;
     excerpt: string;
     content: string; // HTML string
-    tags: string[];
+    tags: readonly string[];
 };
 
-const POSTS_DATA: Post[] = [
-    {
-        slug: 'future-of-small-models',
-        title: 'The Future of Small Models',
-        date: 'Jan 10, 2026',
-        excerpt: 'Why local inference and SLMs might be the key to ubiquitous AI, despite the hype around massive parameter counts.',
-        tags: ['Strategy', 'Edge AI'],
-        content: `
-            <p>Everyone is chasing trillions of parameters. The biggest labs are building data centers that consume more power than small cities. But I think the real breakthrough for businesses isn't in making models bigger. It is in making them small enough to run everywhere.</p>
-            
-            <h3>Latency is the killer</h3>
-            <p>If you are building a voice agent or a real-time copilot, waiting 2 seconds for a cloud API is too long. The magic breaks. Small Language Models (SLMs) that run locally on a device can respond in milliseconds. That feels like a conversation, not a transaction.</p>
+export async function getAllPosts(): Promise<Post[]> {
+    const posts = await reader.collections.posts.all();
 
-            <h3>Data stays home</h3>
-            <p>Privacy is the other massive lever. Financial data, health records, and personal chats should not leave the device if they don't have to. Running a 3B parameter model on a laptop is now possible and surprisingly capable for specific tasks like summarization or classification.</p>
-            
-            <p>The future isn't one giant brain in the cloud. It is billions of tiny, specialized brains running on the edge.</p>
-        `
-    },
-    {
-        slug: 'building-in-public',
-        title: 'Why I Build in Public',
-        date: 'Jan 02, 2026',
-        excerpt: 'Transparency isn’t just marketing; it’s a forcing function for clarity and quality.',
-        tags: ['Philosophy'],
-        content: `
-            <p>I used to wait until a project was perfect before showing it to anyone. The result? I usually never showed it. Or when I did, I realized I had built the wrong thing.</p>
-            
-            <p>Building in public changes the incentive structure. It turns "perfect" into "shipped."</p>
+    const formattedPosts = posts.map(entry => {
+        // Convert Markdoc AST to HTML
+        const ast = entry.entry.content; // This is the AST node
+        // @ts-ignore - formatting specific to Markdoc types
+        const content = Markdoc.renderers.html(ast);
 
-            <h3>Feedback is fuel</h3>
-            <p>When you share a half-baked prototype, you get feedback early. You catch the obvious flaws that you became blind to. You also find collaborators who are excited about the same messy problems you are solving.</p>
+        return {
+            slug: entry.slug,
+            title: entry.entry.title,
+            date: entry.entry.date as string,
+            excerpt: entry.entry.excerpt,
+            tags: entry.entry.tags,
+            content: content
+        };
+    });
 
-            <p>It is uncomfortable. You have to be okay with looking dumb sometimes. You have to be okay with broken demos and typos. But the speed of learning you get in return is worth the ego hit.</p>
-            
-            <p>This site itself is an example. It isn't done. It probably never will be. And that is the point.</p>
-        `
-    },
-    {
-        slug: 'automation-framework',
-        title: 'A Framework for Internal Automation',
-        date: 'Dec 20, 2025',
-        excerpt: 'Before you automate, simplify. Here is the 3-step process I use with clients to identify high-ROI automation targets.',
-        tags: ['Automation', 'Guide'],
-        content: `
-            <p>I see this all the time. A team is drowning in manual work, so they hire an engineer to "automate it." The engineer scripts the exact messy process the team was doing manually. Now they have a messy process that just happens faster.</p>
-            
-            <p><strong>Never automate a bad process.</strong></p>
-
-            <p>Here is the simple framework I use when helping teams:</p>
-            
-            <h3>1. Map the Flow</h3>
-            <p>Write down every single step. Who emails whom? Where does the data go? You will be surprised how many loops and dead ends exist once you see them on paper.</p>
-
-            <h3>2. Simplify (The Delete Button)</h3>
-            <p>Before writing a line of code, ask: "Do we need to do this step at all?" Most approvals, CCs, and double-checks are legacy habits, not requirements. Cut them.</p>
-
-            <h3>3. Automate the Remainder</h3>
-            <p>Now that the process is clean, let the robots handle it. Use LLMs for decision points and scripts for moving data. But only automate what creates value.</p>
-        `
-    }
-];
-
-export function getAllPosts(): Post[] {
-    return POSTS_DATA;
+    // Sort by date descending (newest first)
+    return formattedPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
-export function getPostBySlug(slug: string): Post | null {
-    return POSTS_DATA.find((post) => post.slug === slug) || null;
+export async function getPostBySlug(slug: string): Promise<Post | null> {
+    const post = await reader.collections.posts.read(slug);
+    if (!post) return null;
+
+    // @ts-ignore
+    const content = Markdoc.renderers.html(post.content);
+
+    return {
+        slug: slug,
+        title: post.title,
+        date: post.date as string,
+        excerpt: post.excerpt,
+        tags: post.tags,
+        content: content
+    };
 }

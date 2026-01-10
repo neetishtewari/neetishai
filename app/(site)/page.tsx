@@ -62,18 +62,20 @@ export default function Home() {
             </div>
           </div>
 
-          <div className={styles.backgroundSection}>
-            <h4>Background & Learning</h4>
-            <p>
-              Trained in computer applications and management, with postgraduate education from Symbiosis University, Pune, and IIM Lucknow. Over time, formal education has evolved into continuous learning through building products, experimenting with AI systems, and leveraging modern online learning platforms.
-            </p>
-          </div>
+          <div className={styles.backgroundGrid}>
+            <div className={styles.backgroundCard}>
+              <h4>Background & Learning</h4>
+              <p>
+                Trained in computer applications and management, with postgraduate education from Symbiosis University, Pune, and IIM Lucknow. Over time, formal education has evolved into continuous learning through building products, experimenting with AI systems, and leveraging modern online learning platforms.
+              </p>
+            </div>
 
-          <div className={styles.backgroundSection}>
-            <h4>Learning Stack</h4>
-            <p>
-              Applied AI and product systems, learned through building, experimentation, and continuous iteration on real problems.
-            </p>
+            <div className={styles.backgroundCard}>
+              <h4>Learning Stack</h4>
+              <p>
+                Applied AI and product systems, learned through building, experimentation, and continuous iteration on real problems.
+              </p>
+            </div>
           </div>
         </div>
 
