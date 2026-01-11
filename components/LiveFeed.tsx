@@ -15,6 +15,7 @@ const MANUAL_ITEMS = [
 
 export default async function LiveFeed() {
     const githubItems = await fetchGitHubActivity();
+    console.log('GitHub items:', githubItems);
     const posts = await getAllPosts();
 
     // Transform posts into Feed Items
