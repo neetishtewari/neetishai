@@ -15,7 +15,6 @@ const MANUAL_ITEMS = [
 
 export default async function LiveFeed() {
     const githubItems = await fetchGitHubActivity();
-    console.log('GitHub items:', githubItems);
     const posts = await getAllPosts();
 
     // Transform posts into Feed Items
@@ -31,7 +30,7 @@ export default async function LiveFeed() {
     // Add rawDate to manual items (convert to ISO for sorting)
     const manualItems = MANUAL_ITEMS.map(item => ({
         ...item,
-        rawDate: new Date(item.date).toISOString(),
+        rawDate: new Date().toISOString(), // Use current time for manual items
     }));
 
     // Combine all items and sort by rawDate (newest first)
