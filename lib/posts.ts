@@ -1,8 +1,5 @@
-import { createReader } from '@keystatic/core/reader';
-import keystaticConfig from '@/keystatic.config';
-import Markdoc from '@markdoc/markdoc';
-
-const reader = createReader(process.cwd(), keystaticConfig);
+import { getNotionPosts, getNotionPostBySlug, NotionPost } from './notion';
+import { marked } from 'marked';
 
 export type Post = {
     slug: string;
@@ -14,41 +11,34 @@ export type Post = {
 };
 
 export async function getAllPosts(): Promise<Post[]> {
-    const posts = await reader.collections.posts.all();
+    const notionPosts = await getNotionPosts();
 
-    const formattedPosts = posts.map(entry => {
-        // Convert Markdoc AST to HTML
-        const ast = entry.entry.content; // This is the AST node
-        // @ts-ignore - formatting specific to Markdoc types
-        const content = Markdoc.renderers.html(ast);
+    // Map NotionPost to Post
+    const posts: Post[] = notionPosts.map(p => ({
+        slug: p.slug,
+        title: p.title,
+        date: p.date,
+        excerpt: p.excerpt,
+        content: "", // Listing doesn't need full content
+        tags: p.tags
+    }));
 
-        return {
-            slug: entry.slug,
-            title: entry.entry.title,
-            date: entry.entry.date as string,
-            excerpt: entry.entry.excerpt,
-            tags: entry.entry.tags,
-            content: content
-        };
-    });
-
-    // Sort by date descending (newest first)
-    return formattedPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    return posts;
 }
 
 export async function getPostBySlug(slug: string): Promise<Post | null> {
-    const post = await reader.collections.posts.read(slug);
-    if (!post) return null;
+    const notionPost = await getNotionPostBySlug(slug);
+    if (!notionPost) return null;
 
-    // @ts-ignore
-    const content = Markdoc.renderers.html(post.content);
+    // Convert Markdown to HTML
+    const htmlContent = await marked(notionPost.content || "");
 
     return {
-        slug: slug,
-        title: post.title,
-        date: post.date as string,
-        excerpt: post.excerpt,
-        tags: post.tags,
-        content: content
+        slug: notionPost.slug,
+        title: notionPost.title,
+        date: notionPost.date,
+        excerpt: notionPost.excerpt,
+        content: htmlContent,
+        tags: notionPost.tags
     };
 }
