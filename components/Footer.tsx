@@ -9,9 +9,9 @@ export default function Footer() {
                     &copy; {new Date().getFullYear()} Neetish. All rights reserved.
                 </div>
                 <div className={styles.socials}>
-                    <a href="https://www.linkedin.com/in/neetish/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/neetish/" target="_blank" rel="noopener noreferrer">LinkedIn Connect</a>
                     <a href="https://github.com/neetishtewari" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a href="https://x.com/neetish" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+                    <a href="https://x.com/neetish" target="_blank" rel="noopener noreferrer">X Follow</a>
 
                 </div>
             </div>
