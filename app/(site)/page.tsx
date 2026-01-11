@@ -19,7 +19,7 @@ export default function Home() {
             priority
           />
           <h1 className={styles.title}>
-            AI Product Leader Turning Ideas into <span className={styles.highlight}>Scalable Tech Products</span> for High Growth Teams
+            AI Product Builder Turning Ideas into <span className={styles.highlight}>Scalable Tech Products</span> for High Growth Teams
           </h1>
         </div>
         <p className={styles.subtitle}>
@@ -116,13 +116,13 @@ export default function Home() {
             name: 'Neetish Tewari',
             url: 'https://neetish.ai', // Update with actual domain if known
             image: 'https://neetish.ai/neetish.jpg',
-            jobTitle: 'AI Product Expert',
+            jobTitle: 'AI Product Builder',
             sameAs: [
               'https://www.linkedin.com/in/neetish/',
               'https://x.com/neetish',
               'https://github.com/neetishtewari',
             ],
-            description: 'AI Product Expert helping teams turn AI ideas into clean, practical, scalable products.',
+            description: 'AI Product Builder helping teams turn AI ideas into clean, practical, scalable products.',
           }),
         }}
       />
