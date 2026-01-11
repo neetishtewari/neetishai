@@ -12,7 +12,7 @@ export default function Footer() {
                     <a href="https://www.linkedin.com/in/neetish/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     <a href="https://github.com/neetishtewari" target="_blank" rel="noopener noreferrer">GitHub</a>
                     <a href="https://x.com/neetish" target="_blank" rel="noopener noreferrer">X / Twitter</a>
-                    <a href="mailto:hello@neetish.ai">Email</a>
+
                 </div>
             </div>
         </footer>

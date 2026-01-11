@@ -97,11 +97,11 @@ export default function Home() {
             <p>A structured review of workflows, data, and tools to identify where AI and automation can deliver real ROI.</p>
           </div>
           <div className={styles.offeringCard}>
-            <h3>AI Product MVPs</h3>
+            <h3>Product MVPs</h3>
             <p>Helping founders and teams shape, prototype, and ship their first AI-powered product quickly.</p>
           </div>
           <div className={styles.offeringCard}>
-            <h3>AI Automation Projects</h3>
+            <h3>Automation Projects</h3>
             <p>Designing and building AI-driven automations across documents, operations, finance, and internal workflows.</p>
           </div>
         </div>
