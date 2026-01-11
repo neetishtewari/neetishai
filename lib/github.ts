@@ -2,7 +2,8 @@ export type FeedItem = {
     id: string;
     type: string;
     title: string;
-    date: string;
+    date: string; // formatted for display
+    rawDate: string; // ISO string for sorting
     description: string;
 };
 
@@ -68,6 +69,7 @@ export async function fetchGitHubActivity(): Promise<FeedItem[]> {
                     type,
                     title,
                     date: new Date(event.created_at).toLocaleDateString(undefined, { month: 'short', day: 'numeric' }),
+                    rawDate: event.created_at,
                     description,
                 };
             });

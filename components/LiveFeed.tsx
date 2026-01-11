@@ -22,14 +22,21 @@ export default async function LiveFeed() {
         id: `post-${post.slug}`,
         type: 'Thought',
         title: post.title,
-        date: post.date, // Note: In a real app, you'd parse dates to sort correctly. For now, assuming relatively recent.
+        date: new Date(post.date).toLocaleDateString(undefined, { month: 'short', day: 'numeric' }),
+        rawDate: post.date, // ISO string for sorting
         description: post.excerpt,
     }));
 
-    // Combine: GitHub + Posts + Manual
-    // In a real app, sort by actual Date object. 
-    // Here we just stack them: Posts (High Priority) -> Manual -> GitHub
-    const allItems = [...postItems, ...MANUAL_ITEMS, ...githubItems].slice(0, 4);
+    // Add rawDate to manual items (convert to ISO for sorting)
+    const manualItems = MANUAL_ITEMS.map(item => ({
+        ...item,
+        rawDate: new Date(item.date).toISOString(),
+    }));
+
+    // Combine all items and sort by rawDate (newest first)
+    const allItems = [...postItems, ...manualItems, ...githubItems]
+        .sort((a, b) => new Date(b.rawDate).getTime() - new Date(a.rawDate).getTime())
+        .slice(0, 4);
 
     return (
         <div className={styles.feedContainer}>
