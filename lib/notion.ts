@@ -28,6 +28,7 @@ async function notionFetch(endpoint: string, method: string, body?: any) {
             "Content-Type": "application/json",
         },
         body: body ? JSON.stringify(body) : undefined,
+        next: { revalidate: 60 }
     });
 
     if (!res.ok) {

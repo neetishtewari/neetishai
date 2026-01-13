@@ -6,6 +6,8 @@ type Props = {
     params: Promise<{ slug: string }>;
 };
 
+export const revalidate = 60;
+
 export default async function JournalPost({ params }: Props) {
     const { slug } = await params;
     const post = await getPostBySlug(slug);
