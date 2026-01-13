@@ -60,7 +60,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <ChatWidget />
+        {process.env.NODE_ENV === 'development' && <ChatWidget />}
       </body>
     </html>
   );
