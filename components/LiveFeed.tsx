@@ -7,9 +7,9 @@ const MANUAL_ITEMS = [
     {
         id: 'm1',
         type: 'Project',
-        title: 'Launched "Auto-Feedback"',
-        date: '2 days ago',
-        description: 'An experiment in automated user feedback analysis using Gemini.',
+        title: 'Launched "ResearchOS"',
+        date: '28th Jan',
+        description: 'ResearchOS is a private AI workspace that helps research teams think better, faster, and more consistently.',
     }
 ];
 
