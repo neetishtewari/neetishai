@@ -53,6 +53,14 @@ const PROJECTS = [
         status: 'Cooking',
         githubUrl: 'https://github.com/neetishtewari/kidvid',
     },
+    {
+        slug: 'research-os',
+        title: 'ResearchOS',
+        summary: 'Private AI operating system for market research teams to accelerate proposals, design, and insight generation.',
+        category: 'Market Research, AI Agents',
+        status: 'Cooking',
+        githubUrl: 'https://github.com/neetishtewari/researchOS',
+    },
 ];
 
 export default function ProductLab() {
