@@ -19,11 +19,11 @@ export default function Home() {
             priority
           />
           <h1 className={styles.title}>
-            AI Product Builder Turning Ideas into <span className={styles.highlight}>Scalable Tech Products</span> for High Growth Teams
+            I help mid-size and enterprise teams identify and implement <span className={styles.highlight}>high-ROI AI use cases</span> from discovery to adoption.
           </h1>
         </div>
         <p className={styles.subtitle}>
-          Helping teams turn AI ideas into clean, practical, scalable products.
+          Translating business pain points into actionable AI strategies that drive real value.
         </p>
         <a href="https://calendly.com/neetish-tewari/30min" target="_blank" rel="noopener noreferrer" className={styles.cta}>
           Let&#39;s Talk <span className={styles.arrow}>→</span>
@@ -116,13 +116,13 @@ export default function Home() {
             name: 'Neetish Tewari',
             url: 'https://neetish.ai', // Update with actual domain if known
             image: 'https://neetish.ai/neetish.jpg',
-            jobTitle: 'AI Product Builder',
+            jobTitle: 'AI Strategy Consultant',
             sameAs: [
               'https://www.linkedin.com/in/neetish/',
               'https://x.com/neetish',
               'https://github.com/neetishtewari',
             ],
-            description: 'AI Product Builder helping teams turn AI ideas into clean, practical, scalable products.',
+            description: 'AI Strategy Consultant helping mid-size and enterprise teams identify and implement high-ROI AI use cases.',
           }),
         }}
       />
