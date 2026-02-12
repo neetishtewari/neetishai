@@ -19,7 +19,7 @@ export default function Home() {
             priority
           />
           <h1 className={styles.title}>
-            I help mid-size and enterprise teams identify and implement <span className={styles.highlight}>high-ROI AI use cases</span> from discovery to adoption.
+            Focused on building useful, usable AI products with <span className={styles.highlight}>real business value</span>.
           </h1>
         </div>
         <p className={styles.subtitle}>
@@ -122,7 +122,7 @@ export default function Home() {
               'https://x.com/neetish',
               'https://github.com/neetishtewari',
             ],
-            description: 'AI Strategy Consultant helping mid-size and enterprise teams identify and implement high-ROI AI use cases.',
+            description: 'AI Strategy Consultant focused on building useful, usable AI products with real business value.',
           }),
         }}
       />
