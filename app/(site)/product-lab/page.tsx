@@ -88,13 +88,18 @@ export default function ProductLab() {
                             <h3 className={styles.cardTitle}>{project.title}</h3>
                             <p className={styles.cardSummary}>{project.summary}</p>
                         </Link>
-                        {project.githubUrl && (
-                            <div className={styles.cardFooter}>
+                        <div className={styles.cardFooter}>
+                            {project.status === 'Live' && project.demoUrl && (
+                                <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className={styles.demoLink}>
+                                    View Demo ↗
+                                </a>
+                            )}
+                            {project.githubUrl && (
                                 <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className={styles.githubLink}>
                                     View Code ↗
                                 </a>
-                            </div>
-                        )}
+                            )}
+                        </div>
                     </div>
                 ))}
             </div>

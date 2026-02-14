@@ -82,10 +82,13 @@
 
 .cardFooter {
     display: flex;
-    justify-content: flex-end;
-    margin-top: var(--spacing-md);
-    padding-top: var(--spacing-sm);
-    border-top: 1px solid var(--gray-light);
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    /* Push footer to bottom */
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border);
+    gap: var(--spacing-sm);
 }
 
 .githubLink {
@@ -95,6 +98,29 @@
     align-items: center;
     gap: 4px;
     transition: color 0.2s ease;
+    margin-left: auto;
+    /* Push to right if only item, or if flex-start */
+}
+
+/* If both present, justify-content: space-between handles it. 
+   But if only github link, we want it on the right? 
+   Original was justify-content: flex-end. 
+   Let's keep flex-end for github link specifically if we can, or just space-between.
+*/
+
+.demoLink {
+    font-size: 0.85rem;
+    color: var(--foreground);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.demoLink:hover {
+    opacity: 0.8;
 }
 
 .githubLink:hover {
