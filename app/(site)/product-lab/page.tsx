@@ -25,7 +25,8 @@ const PROJECTS = [
         title: 'VizData',
         summary: 'Visualize data from databases or spreadsheets to uncover insights and patterns.',
         category: 'Data Visualization',
-        status: 'Cooking',
+        status: 'Live',
+        demoUrl: 'https://vizdataboard.vercel.app/',
         githubUrl: 'https://github.com/neetishtewari/vizdata',
     },
     {

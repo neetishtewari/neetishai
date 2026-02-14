@@ -80,7 +80,7 @@ export default function Home() {
         </div>
 
         <div className={styles.liveFeedSection}>
-          <LiveFeed />
+          <LiveFeed limit={4} showLink={true} />
         </div>
       </section>
 
