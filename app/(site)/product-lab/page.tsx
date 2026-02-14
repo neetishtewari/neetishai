@@ -8,7 +8,7 @@ const PROJECTS = [
         summary: 'Multi-agent AI system designed to make sense of unstructured business documents.',
         category: 'Document Intelligence',
         status: 'Live',
-        demoUrl: 'https://documentgem.com',
+        demoUrl: 'https://documentgem.vercel.app/',
         githubUrl: 'https://github.com/neetishtewari/document-gem',
     },
     {
@@ -17,7 +17,7 @@ const PROJECTS = [
         summary: 'AI voice agent powered English coaching platform for aviation trainees.',
         category: 'EdTech, AI Voice Agents',
         status: 'Live',
-        demoUrl: 'https://aerospeak.ai',
+        demoUrl: 'https://aersospeak.vercel.app/',
         githubUrl: 'https://github.com/neetishtewari/aerospeak',
     },
     {
@@ -35,7 +35,7 @@ const PROJECTS = [
         summary: 'Review employee expense reimbursements automatically using RAG-based AI agents.',
         category: 'Finance Automation',
         status: 'Live',
-        demoUrl: '#',
+        demoUrl: 'https://expenseai.streamlit.app/',
         githubUrl: 'https://github.com/neetishtewari/expense-ai',
     },
     {

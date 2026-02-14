@@ -39,7 +39,7 @@ const PROJECTS: Record<string, {
         problem: 'Finance teams spend countless hours manually checking expense claims against complex company policies, creating bottlenecks and delaying reimbursements.',
         approach: 'Implemented RAG-based AI agents that read company policies and automatically valid expense submissions, flagging violations and approving valid claims.',
         outcome: 'Scales expense compliance effortlessly, reducing overhead for finance teams while speeding up reimbursement cycles for employees.',
-        links: { demo: 'https://expenseai.streamlit.com/' }
+        links: { demo: 'https://expenseai.streamlit.app/' }
     },
     'driveex': {
         title: 'DriveEx',
