@@ -31,7 +31,7 @@ const PROJECTS: Record<string, {
         problem: 'Raw data in spreadsheets and databases is hard to interpret at a glance. Building complex dashboards for quick analysis is often too slow and resource-intensive.',
         approach: 'Created a tool that connects directly to data sources to generate instant, clarity-focused visualizations, prioritizing quick exploration over complex setup.',
         outcome: 'Enables users to spot patterns and trends immediately, facilitating faster early-stage decision making.',
-        links: { github: 'https://github.com/neetishtewari/vizdata' }
+        links: { demo: 'https://vizdataboard.vercel.app/', github: 'https://github.com/neetishtewari/vizdata' }
     },
     'expense-ai': {
         title: 'Expense AI',
