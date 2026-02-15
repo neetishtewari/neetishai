@@ -84,25 +84,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Active Experiments Section */}
+      {/* My AI Research & Capability Lab */}
       <section className={styles.offerings}>
-        <h2>What I&#39;m Learning &amp; Active Experiments</h2>
+        <h2>My AI Research &amp; Capability Lab</h2>
+        <p className={styles.sectionSubtitle}>Exploring the intersection of Generative AI and Product Strategy.</p>
         <div className={styles.offeringsGrid}>
-          <Link href="/thought-journal/automation-framework" className={styles.offeringCardLink}>
-            <div className={styles.offeringCard}>
-              <h3>Internal Automation Framework</h3>
-              <p>Before automating, simplify. A 3-step process to identify high-ROI targets: Map, Simplify, then Automate.</p>
-            </div>
-          </Link>
-          <Link href="/thought-journal/future-of-small-models" className={styles.offeringCardLink}>
-            <div className={styles.offeringCard}>
-              <h3>Small Language Models</h3>
-              <p>Why local inference and SLMs might be the key to ubiquitous AI. Privacy, latency, and the edge.</p>
-            </div>
-          </Link>
           <div className={styles.offeringCard}>
-            <h3>Agentic AI in Product</h3>
-            <p>Exploring how autonomous agents are reshaping product management workflows and decision making.</p>
+            <h3>AI Strategy &amp; Workshops</h3>
+            <p>I document frameworks for helping teams bridge the gap between AI hype and practical business application. My research focuses on how organizations can move from curiosity to implementation through structured discovery.</p>
+          </div>
+          <div className={styles.offeringCard}>
+            <h3>Product Audits &amp; ROI Analysis</h3>
+            <p>I experiment with methodologies to audit workflows and data structures. My goal is to identify where Agentic AI and automation can deliver measurable impact and solve &quot;The Risk of Not Investing&quot; (RONI).</p>
+          </div>
+          <div className={styles.offeringCard}>
+            <h3>Rapid Prototyping (MVPs)</h3>
+            <p>I build &quot;proof-of-concept&quot; products to explore how quickly a founder&#39;s vision can be turned into a functional, scalable AI-powered tool. This is my playground for testing speed-to-market strategies.</p>
+          </div>
+          <div className={styles.offeringCard}>
+            <h3>Automation Engineering</h3>
+            <p>I design and share internal experiments focused on AI-driven workflows across documents, finance, and operations, pushing the boundaries of what invisible, intuitive AI can achieve.</p>
           </div>
         </div>
       </section>

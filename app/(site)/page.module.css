@@ -232,6 +232,14 @@
   letter-spacing: -0.01em;
 }
 
+.sectionSubtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-lg);
+  margin-top: calc(var(--spacing-lg) * -0.5);
+  max-width: 600px;
+}
+
 .offeringsGrid {
   display: grid;
   grid-template-columns: 1fr;
@@ -240,15 +248,8 @@
 
 @media (min-width: 768px) {
   .offeringsGrid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
-}
-
-.offeringCardLink {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  height: 100%;
 }
 
 .offeringCard {
