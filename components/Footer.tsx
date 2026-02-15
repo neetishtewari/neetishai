@@ -5,6 +5,9 @@ export default function Footer() {
     return (
         <footer className={styles.footer}>
             <div className={`container ${styles.container}`}>
+                <div className={styles.disclaimer}>
+                    Disclaimer: All projects and content shared on this site are personal experiments conducted independently on my own time and equipment. They represent my personal learning journey and do not reflect the views or proprietary interests of my current or past employers.
+                </div>
                 <div className={styles.copyright}>
                     &copy; {new Date().getFullYear()} Neetish. All rights reserved.
                 </div>

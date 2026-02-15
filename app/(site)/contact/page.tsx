@@ -4,10 +4,9 @@ import styles from './Contact.module.css';
 export default function Contact() {
     return (
         <div className={`container ${styles.contactContainer}`}>
-            <h1 className={styles.title}>Let&#39;s Chat</h1>
+            <h1 className={styles.title}>Let&#39;s Connect</h1>
             <p className={styles.intro}>
-                If you&#39;re curious about AI, have a specific challenge, or just want to swap ideas, I&#39;d love to hear from you.
-                No sales pitches, just conversation.
+                I am always open to discussing AI research, open-source projects, or industry trends.
             </p>
 
             <div className={styles.grid}>

@@ -23,7 +23,7 @@ export default function Home() {
           </h1>
         </div>
         <p className={styles.subtitle}>
-          Translating business pain points into actionable AI strategies that drive real value.
+          Exploring the development of AI ideas into clean, practical, scalable products.
         </p>
         <a href="mailto:hello@neetish.ai" className={styles.cta}>
           Collaborate on Research <span className={styles.arrow}>→</span>
@@ -36,7 +36,7 @@ export default function Home() {
           <h2>Curiosity. Collaboration. Creativity.</h2>
 
           <p>
-            I build products that go from zero to revenue. I work with startups, global banks and large staffing companies to solve real problems with speed and clarity.
+            Having built products for startups and global banks, I now focus on personal research into GenAI and agentic systems.
           </p>
           <p>
             I have been obsessed with AI for the last five to six years, with a strong focus on generative and agentic AI in the last two to three years. I thrive in complex environments, turn ambiguity into clear product decisions and drive teams from first concept to launch. I focus on shipping products that scale, earn trust and create measurable impact.

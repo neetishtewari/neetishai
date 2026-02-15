@@ -11,15 +11,15 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata: Metadata = {
   title: {
     template: '%s | Neetish Tewari',
-    default: 'Neetish Tewari | AI Product Builder and Automation Consultant',
+    default: 'Neetish Tewari | Personal AI Research Portfolio',
   },
-  description: "AI Product Builder and Automation Consultant. Helping teams turn AI ideas into clean, practical, scalable products through workshops, audits, and MVPs.",
+  description: "Personal research into GenAI and agentic systems. Exploring the development of AI ideas into clean, practical, scalable products.",
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://neetish.ai',
-    title: 'Neetish Tewari | AI Product Builder',
-    description: 'AI Product Builder and Automation Consultant. Helping teams turn ideas into practical AI products.',
+    title: 'Neetish Tewari | Personal AI Research Portfolio',
+    description: 'Personal research into GenAI and agentic systems. Exploring the boundaries of product management and AI.',
     siteName: 'Neetish Tewari',
     images: [
       {
