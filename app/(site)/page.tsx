@@ -19,14 +19,14 @@ export default function Home() {
             priority
           />
           <h1 className={styles.title}>
-            Focused on building useful, usable AI products with <span className={styles.highlight}>real business value</span>.
+            Exploring the boundaries of <span className={styles.highlight}>Agentic AI</span> and <span className={styles.highlight}>Product Management</span>.
           </h1>
         </div>
         <p className={styles.subtitle}>
           Translating business pain points into actionable AI strategies that drive real value.
         </p>
-        <a href="https://calendly.com/neetish-tewari/30min" target="_blank" rel="noopener noreferrer" className={styles.cta}>
-          Let&#39;s Talk <span className={styles.arrow}>→</span>
+        <a href="mailto:hello@neetish.ai" className={styles.cta}>
+          Collaborate on Research <span className={styles.arrow}>→</span>
         </a>
       </section>
 
@@ -84,25 +84,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What I Help With Section */}
+      {/* Active Experiments Section */}
       <section className={styles.offerings}>
-        <h2>What I Help With</h2>
+        <h2>What I&#39;m Learning &amp; Active Experiments</h2>
         <div className={styles.offeringsGrid}>
+          <Link href="/thought-journal/automation-framework" className={styles.offeringCardLink}>
+            <div className={styles.offeringCard}>
+              <h3>Internal Automation Framework</h3>
+              <p>Before automating, simplify. A 3-step process to identify high-ROI targets: Map, Simplify, then Automate.</p>
+            </div>
+          </Link>
+          <Link href="/thought-journal/future-of-small-models" className={styles.offeringCardLink}>
+            <div className={styles.offeringCard}>
+              <h3>Small Language Models</h3>
+              <p>Why local inference and SLMs might be the key to ubiquitous AI. Privacy, latency, and the edge.</p>
+            </div>
+          </Link>
           <div className={styles.offeringCard}>
-            <h3>AI Workshops</h3>
-            <p>Practical, hands-on sessions to help teams understand and apply AI to real business problems.</p>
-          </div>
-          <div className={styles.offeringCard}>
-            <h3>AI Audits</h3>
-            <p>A structured review of workflows, data, and tools to identify where AI and automation can deliver real ROI.</p>
-          </div>
-          <div className={styles.offeringCard}>
-            <h3>Product MVPs</h3>
-            <p>Helping founders and teams shape, prototype, and ship their first AI-powered product quickly.</p>
-          </div>
-          <div className={styles.offeringCard}>
-            <h3>Automation Projects</h3>
-            <p>Designing and building AI-driven automations across documents, operations, finance, and internal workflows.</p>
+            <h3>Agentic AI in Product</h3>
+            <p>Exploring how autonomous agents are reshaping product management workflows and decision making.</p>
           </div>
         </div>
       </section>
