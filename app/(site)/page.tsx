@@ -19,11 +19,11 @@ export default function Home() {
             priority
           />
           <h1 className={styles.title}>
-            Exploring the boundaries of <span className={styles.highlight}>Agentic AI</span> and <span className={styles.highlight}>Product Management</span>.
+            Exploring the boundaries of <span className={styles.highlight}>Artificial Intelligence</span> and <span className={styles.highlight}>Product Management</span>.
           </h1>
         </div>
         <p className={styles.subtitle}>
-          Exploring the development of AI ideas into clean, practical, scalable products.
+          Experimenting and documenting AI ideas into clean, practical, scalable products.
         </p>
         <a href="mailto:hello@neetish.ai" className={styles.cta}>
           Collaborate on Research <span className={styles.arrow}>→</span>
@@ -36,7 +36,7 @@ export default function Home() {
           <h2>Curiosity. Collaboration. Creativity.</h2>
 
           <p>
-            Having built products for startups and global banks, I now focus on personal research into GenAI and agentic systems.
+            With 17+ years in product, I now dedicate my personal research to the intersection of LLMs, automation, and full-stack AI systems.
           </p>
           <p>
             I have been obsessed with AI for the last five to six years, with a strong focus on generative and agentic AI in the last two to three years. I thrive in complex environments, turn ambiguity into clear product decisions and drive teams from first concept to launch. I focus on shipping products that scale, earn trust and create measurable impact.
