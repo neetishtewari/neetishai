@@ -64,6 +64,13 @@
   line-height: 1.4;
 }
 
+.ctaGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
 .cta {
   display: inline-flex;
   align-items: center;
@@ -77,6 +84,20 @@
 .cta:hover {
   border-bottom-color: var(--accent);
   color: var(--accent-hover);
+}
+
+.ctaLinkedin {
+  color: #0A66C2;
+}
+
+.ctaLinkedin:hover {
+  border-bottom-color: #0A66C2;
+  color: #004182;
+}
+
+.linkedinIcon {
+  margin-right: 0.4rem;
+  flex-shrink: 0;
 }
 
 .arrow {
