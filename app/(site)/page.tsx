@@ -26,7 +26,7 @@ export default function Home() {
           Experimenting and documenting AI ideas into clean, practical, scalable products.
         </p>
         <div className={styles.ctaGroup}>
-          <a href="mailto:hello@neetish.ai" className={styles.cta}>
+          <a href="https://calendly.com/neetish-tewari/30min" target="_blank" rel="noopener noreferrer" className={styles.cta}>
             Collaborate on Research <span className={styles.arrow}>→</span>
           </a>
           <a href="https://www.linkedin.com/in/neetish/" target="_blank" rel="noopener noreferrer" className={`${styles.cta} ${styles.ctaLinkedin}`}>
