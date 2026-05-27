@@ -9,10 +9,10 @@ const MANUAL_ITEMS = [
     {
         id: 'm2',
         type: 'Project',
-        title: 'Launched "VizData"',
-        date: '14th Feb', // Or current date
-        description: 'VizData allows you to visualize data from databases or spreadsheets to uncover insights and patterns.',
-        rawDate: new Date().toISOString(), // Use current time for manual items
+        title: 'Launched "Superfit"',
+        date: '28th May',
+        description: 'Superfit is an AI-powered, privacy-first Android health companion with speech-to-text nutrition logging and telemetry aggregation.',
+        rawDate: '2026-05-28T00:00:00.000Z',
     },
     {
         id: 'm1',
