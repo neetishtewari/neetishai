@@ -1,7 +1,18 @@
 import Link from 'next/link';
 import styles from './ProductLab.module.css';
 
-const PROJECTS = [
+interface Project {
+    slug: string;
+    title: string;
+    summary: string;
+    category: string;
+    status: string;
+    githubUrl?: string;
+    demoUrl?: string;
+    betaUrl?: string;
+}
+
+const PROJECTS: Project[] = [
     {
         slug: 'superfit',
         title: 'Superfit',
@@ -9,6 +20,7 @@ const PROJECTS = [
         category: 'Android, Health & AI',
         status: 'Live',
         githubUrl: 'https://github.com/neetishtewari/superfit',
+        betaUrl: 'https://appdistribution.firebase.google.com/testerapps/1:797661593902:android:59ec7d7e8f60901b027abf/releases/7r4ro18t6poi0?utm_source=firebase-console',
     },
     {
         slug: 'document-gem',
@@ -100,6 +112,11 @@ export default function ProductLab() {
                             {project.status === 'Live' && project.demoUrl && (
                                 <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className={styles.demoLink}>
                                     View Demo ↗
+                                </a>
+                            )}
+                            {project.status === 'Live' && project.betaUrl && (
+                                <a href={project.betaUrl} target="_blank" rel="noopener noreferrer" className={styles.demoLink}>
+                                    Get Beta Build (Firebase) ↗
                                 </a>
                             )}
                             {project.githubUrl && (

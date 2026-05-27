@@ -7,7 +7,7 @@ const PROJECTS: Record<string, {
     problem: string;
     approach: string;
     outcome: string;
-    links: { demo?: string; github?: string }
+    links: { demo?: string; github?: string; beta?: string }
 }> = {
     'superfit': {
         title: 'Superfit',
@@ -15,7 +15,7 @@ const PROJECTS: Record<string, {
         problem: 'Consolidating health data from multiple telemetry sources while manually logging daily food intake is highly tedious. Furthermore, users are increasingly concerned about the privacy of their sensitive health and biometric telemetry.',
         approach: 'Developed an offline-first Android application leveraging Health Connect API for seamless telemetry aggregation. Integrated speech-to-text with Gemini\'s structured JSON schema parsing to extract macronutrients from natural voice logs. Secured sync to Cloud Firestore is handled in the background via WorkManager when device criteria (charging, Wi-Fi) are met.',
         outcome: 'A premium, offline-first mobile health assistant that removes the friction of nutrition tracking via natural speech, respects user privacy, and generates personalized coaching insights from aggregated telemetry.',
-        links: { github: 'https://github.com/neetishtewari/superfit' }
+        links: { github: 'https://github.com/neetishtewari/superfit', beta: 'https://appdistribution.firebase.google.com/testerapps/1:797661593902:android:59ec7d7e8f60901b027abf/releases/7r4ro18t6poi0?utm_source=firebase-console' }
     },
     'document-gem': {
         title: 'Document Gem',
@@ -94,6 +94,9 @@ export default async function ProjectDetail({ params }: Props) {
                 <div className={styles.links}>
                     {project.links.demo && (
                         <a href={project.links.demo} className={styles.linkButton} target="_blank" rel="noopener noreferrer">View Deployment ↗</a>
+                    )}
+                    {project.links.beta && (
+                        <a href={project.links.beta} className={styles.linkButton} target="_blank" rel="noopener noreferrer">Get Beta Build (Firebase) ↗</a>
                     )}
                     {project.links.github && (
                         <a href={project.links.github} className={styles.linkButtonSecondary} target="_blank" rel="noopener noreferrer">View Code ↗</a>
