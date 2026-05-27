@@ -3,6 +3,14 @@ import styles from './ProductLab.module.css';
 
 const PROJECTS = [
     {
+        slug: 'superfit',
+        title: 'Superfit',
+        summary: 'AI-powered, privacy-first Android health companion with speech-to-text nutrition logging and telemetry aggregation.',
+        category: 'Android, Health & AI',
+        status: 'Live',
+        githubUrl: 'https://github.com/neetishtewari/superfit',
+    },
+    {
         slug: 'document-gem',
         title: 'Document Gem',
         summary: 'Multi-agent AI system designed to make sense of unstructured business documents.',

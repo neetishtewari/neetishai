@@ -9,6 +9,14 @@ const PROJECTS: Record<string, {
     outcome: string;
     links: { demo?: string; github?: string }
 }> = {
+    'superfit': {
+        title: 'Superfit',
+        summary: 'AI-powered, privacy-first Android health companion with speech-to-text nutrition logging and telemetry aggregation.',
+        problem: 'Consolidating health data from multiple telemetry sources while manually logging daily food intake is highly tedious. Furthermore, users are increasingly concerned about the privacy of their sensitive health and biometric telemetry.',
+        approach: 'Developed an offline-first Android application leveraging Health Connect API for seamless telemetry aggregation. Integrated speech-to-text with Gemini\'s structured JSON schema parsing to extract macronutrients from natural voice logs. Secured sync to Cloud Firestore is handled in the background via WorkManager when device criteria (charging, Wi-Fi) are met.',
+        outcome: 'A premium, offline-first mobile health assistant that removes the friction of nutrition tracking via natural speech, respects user privacy, and generates personalized coaching insights from aggregated telemetry.',
+        links: { github: 'https://github.com/neetishtewari/superfit' }
+    },
     'document-gem': {
         title: 'Document Gem',
         summary: 'Multi-agent AI system designed to make sense of unstructured business documents.',
