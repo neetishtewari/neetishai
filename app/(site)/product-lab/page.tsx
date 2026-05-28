@@ -20,7 +20,7 @@ const PROJECTS: Project[] = [
         category: 'Android, Health & AI',
         status: 'Live',
         githubUrl: 'https://github.com/neetishtewari/superfit',
-        betaUrl: 'https://appdistribution.firebase.google.com/testerapps/1:797661593902:android:59ec7d7e8f60901b027abf/releases/7r4ro18t6poi0?utm_source=firebase-console',
+        betaUrl: 'https://appdistribution.firebase.google.com/testerapps/1:797661593902:android:59ec7d7e8f60901b027abf/releases/129u5r56m2fo0?utm_source=firebase-console',
     },
     {
         slug: 'document-gem',
