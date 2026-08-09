@@ -19,8 +19,9 @@ const PROJECTS: Project[] = [
         summary: 'AI-powered, privacy-first Android health companion with speech-to-text nutrition logging and telemetry aggregation.',
         category: 'Android, Health & AI',
         status: 'Live',
+        demoUrl: '/superfit',
         githubUrl: 'https://github.com/neetishtewari/superfit',
-        betaUrl: 'https://appdistribution.firebase.google.com/testerapps/1:797661593902:android:59ec7d7e8f60901b027abf/releases/129u5r56m2fo0?utm_source=firebase-console',
+        betaUrl: 'https://play.google.com/store/apps/details?id=com.superfit.aifitness',
     },
     {
         slug: 'document-gem',
@@ -106,17 +107,16 @@ export default function ProductLab() {
                                 <span className={styles.category}>{project.category}</span>
                             </div>
                             <h3 className={styles.cardTitle}>{project.title}</h3>
-                            <p className={styles.cardSummary}>{project.summary}</p>
                         </Link>
                         <div className={styles.cardFooter}>
                             {project.status === 'Live' && project.demoUrl && (
-                                <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className={styles.demoLink}>
-                                    View Demo ↗
+                                <a href={project.demoUrl} target={project.demoUrl.startsWith('http') ? "_blank" : undefined} rel={project.demoUrl.startsWith('http') ? "noopener noreferrer" : undefined} className={styles.demoLink}>
+                                    {project.demoUrl.startsWith('/') ? 'App Website ↗' : 'View Demo ↗'}
                                 </a>
                             )}
                             {project.status === 'Live' && project.betaUrl && (
                                 <a href={project.betaUrl} target="_blank" rel="noopener noreferrer" className={styles.demoLink}>
-                                    Get Beta Build (Firebase) ↗
+                                    {project.betaUrl.includes('play.google.com') ? 'Google Play Alpha ↗' : 'Get Beta Build (Firebase) ↗'}
                                 </a>
                             )}
                             {project.githubUrl && (
