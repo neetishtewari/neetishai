@@ -15,12 +15,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://neetishtewari.co"),
   title: "Superfit | The Easiest Way to Reach Your Fitness Goals",
   description: "Ditch the tedious calorie math. Speak your meals, track your workouts, sync your steps automatically, and keep your health 100% private. Built for Android.",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://neetishtewari.com/superfit",
+    url: "https://neetishtewari.co/superfit",
     title: "Superfit | The Easiest Way to Reach Your Fitness Goals",
     description: "Effortless voice meal logging, automatic step sync, and adaptive nutrition targets. The modern AI fitness companion for Android.",
     siteName: "Superfit",
