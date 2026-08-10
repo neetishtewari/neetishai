@@ -238,6 +238,116 @@
   margin-top: var(--spacing-md);
 }
 
+/* Featured App Spotlight */
+.featuredApp {
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--border);
+}
+
+.featuredAppCard {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.featuredAppCard:hover {
+  transform: translateY(-3px);
+  border-color: var(--text-secondary);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.featuredAppGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.04) 0%, rgba(16, 185, 129, 0.04) 50%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.featuredAppCard:hover .featuredAppGlow {
+  opacity: 1;
+}
+
+.featuredAppIcon {
+  flex-shrink: 0;
+}
+
+.featuredAppLogo {
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.featuredAppContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.featuredAppBadge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #0284c7;
+  background: rgba(2, 132, 199, 0.08);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.4rem;
+}
+
+.featuredAppTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--foreground);
+}
+
+.featuredAppDesc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.featuredAppArrow {
+  flex-shrink: 0;
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.featuredAppCard:hover .featuredAppArrow {
+  transform: translateX(4px);
+  color: #0284c7;
+}
+
+@media (max-width: 768px) {
+  .featuredAppCard {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+  .featuredAppArrow {
+    display: none;
+  }
+}
+
 /* What I Help With Section */
 .offerings {
   margin-top: var(--spacing-lg);

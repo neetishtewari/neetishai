@@ -90,6 +90,30 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured App Spotlight */}
+      <section className={styles.featuredApp}>
+        <Link href="/superfit" className={styles.featuredAppCard}>
+          <div className={styles.featuredAppGlow}></div>
+          <div className={styles.featuredAppIcon}>
+            <Image
+              src="/superfit_logo.jpg"
+              alt="Superfit App Icon"
+              width={56}
+              height={56}
+              className={styles.featuredAppLogo}
+            />
+          </div>
+          <div className={styles.featuredAppContent}>
+            <span className={styles.featuredAppBadge}>Featured Project</span>
+            <h3 className={styles.featuredAppTitle}>Superfit</h3>
+            <p className={styles.featuredAppDesc}>
+              An AI fitness companion that understands what you eat in any language. Just speak naturally — tracking your health has never been this easy.
+            </p>
+          </div>
+          <span className={styles.featuredAppArrow}>→</span>
+        </Link>
+      </section>
+
       {/* My AI Research & Capability Lab */}
       <section className={styles.offerings}>
         <h2>My AI Research &amp; Capability Lab</h2>
