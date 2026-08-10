@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
 import styles from "./superfit.module.css";
 
@@ -212,6 +212,64 @@ export default function SuperfitLandingPage() {
     }, 1200);
   };
 
+  // === CINEMATIC 3D MOUSE TRACKING ===
+  const heroRef = useRef<HTMLDivElement>(null);
+  const tiltRef = useRef<HTMLDivElement>(null);
+  const spotlightRef = useRef<HTMLDivElement>(null);
+  const rafRef = useRef<number | null>(null);
+  const [spotlightVisible, setSpotlightVisible] = useState(false);
+
+  const handleHeroMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    if (!heroRef.current || !tiltRef.current) return;
+
+    const rect = heroRef.current.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width; // 0..1
+    const y = (e.clientY - rect.top) / rect.height;  // 0..1
+
+    // Map to subtle tilt angles (-3..3 deg)
+    const rotateY = (x - 0.5) * 6;
+    const rotateX = (0.5 - y) * 4;
+
+    if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    rafRef.current = requestAnimationFrame(() => {
+      if (tiltRef.current) {
+        tiltRef.current.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      }
+      if (spotlightRef.current) {
+        spotlightRef.current.style.transform = `translate(${e.clientX - rect.left - 300}px, ${e.clientY - rect.top - 300}px)`;
+      }
+    });
+
+    if (!spotlightVisible) setSpotlightVisible(true);
+  }, [spotlightVisible]);
+
+  const handleHeroMouseLeave = useCallback(() => {
+    if (tiltRef.current) {
+      tiltRef.current.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    }
+    setSpotlightVisible(false);
+  }, []);
+
+  // === SCROLL REVEAL OBSERVER ===
+  useEffect(() => {
+    const sections = document.querySelectorAll(`.${styles.scrollReveal}`);
+    if (sections.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.scrollRevealVisible);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -60px 0px' }
+    );
+
+    sections.forEach((s) => observer.observe(s));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className={`${styles.container} ${theme === "dark" ? styles.darkTheme : ""}`}>
       {/* Ambient Mesh Glows */}
@@ -261,7 +319,42 @@ export default function SuperfitLandingPage() {
 
       {/* Main Content */}
       <main>
-        {/* HERO SECTION */}
+        {/* CINEMATIC 3D HERO SECTION */}
+        <div
+          ref={heroRef}
+          className={styles.heroPerspective}
+          onMouseMove={handleHeroMouseMove}
+          onMouseLeave={handleHeroMouseLeave}
+        >
+          {/* Cinematic Light Rays */}
+          <div className={styles.lightRays}>
+            <div className={styles.lightRay}></div>
+            <div className={styles.lightRay}></div>
+            <div className={styles.lightRay}></div>
+            <div className={styles.lightRay}></div>
+            <div className={styles.lightRay}></div>
+          </div>
+
+          {/* Mouse-following Spotlight */}
+          <div
+            ref={spotlightRef}
+            className={`${styles.heroSpotlight} ${spotlightVisible ? styles.heroSpotlightVisible : ''}`}
+          ></div>
+
+          {/* Floating 3D Particles */}
+          <div className={styles.particleField}>
+            <div className={styles.particle}></div>
+            <div className={styles.particle}></div>
+            <div className={styles.particle}></div>
+            <div className={styles.particle}></div>
+            <div className={styles.particle}></div>
+            <div className={styles.particle}></div>
+            <div className={styles.particle}></div>
+            <div className={styles.particle}></div>
+          </div>
+
+          {/* Tiltable 3D Layer */}
+          <div ref={tiltRef} className={styles.heroTiltLayer}>
         <section className={styles.hero}>
           <div className={styles.pillBadge}>
             <span className={styles.pillDot}></span>
@@ -386,12 +479,17 @@ export default function SuperfitLandingPage() {
                   </div>
                 </div>
               )}
+
+              {/* 3D Ground Reflection */}
+              <div className={styles.phoneReflection}></div>
             </div>
           </div>
         </section>
+          </div>{/* Close tiltLayer */}
+        </div>{/* Close heroPerspective */}
 
         {/* COMPARISON SECTION: THE OLD WAY VS SUPERFIT */}
-        <section className={styles.comparisonSection} id="comparison">
+        <section className={`${styles.comparisonSection} ${styles.scrollReveal}`} id="comparison">
           <div className={styles.sectionHeaderCenter}>
             <span className={styles.sectionEyebrow}>Effortless By Design</span>
             <h2 className={styles.sectionTitle}>Stop fighting your fitness tracker.</h2>
@@ -650,7 +748,7 @@ export default function SuperfitLandingPage() {
         </section>
 
         {/* ASYMMETRIC BENTO GRID FEATURES */}
-        <section className={styles.bentoSection}>
+        <section className={`${styles.bentoSection} ${styles.scrollReveal}`}>
           <div className={styles.sectionHeaderCenter}>
             <span className={styles.sectionEyebrow}>Engineered For Consistency</span>
             <h2 className={styles.sectionTitle}>Everything you need to succeed.</h2>
