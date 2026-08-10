@@ -19,7 +19,7 @@ export default function Home() {
             priority
           />
           <h1 className={styles.title}>
-            Exploring the boundaries of <span className={styles.highlight}>Artificial Intelligence</span> and <span className={styles.highlight}>Product Management</span>.
+            AI Product Manager — turning <span className={styles.highlight}>AI ideas</span> into <span className={styles.highlight}>scalable products</span>.
           </h1>
         </div>
         <p className={styles.subtitle}>
@@ -145,15 +145,24 @@ export default function Home() {
             '@context': 'https://schema.org',
             '@type': 'Person',
             name: 'Neetish Tewari',
-            url: 'https://neetish.ai', // Update with actual domain if known
-            image: 'https://neetish.ai/neetish.jpg',
-            jobTitle: 'AI Strategy Consultant',
+            url: 'https://neetishtewari.co',
+            image: 'https://neetishtewari.co/neetish.jpg',
+            jobTitle: 'AI Product Manager & Strategy Consultant',
             sameAs: [
               'https://www.linkedin.com/in/neetish/',
               'https://x.com/neetish',
               'https://github.com/neetishtewari',
             ],
-            description: 'AI Strategy Consultant focused on building useful, usable AI products with real business value.',
+            description: 'AI Product Manager with 17+ years of experience specializing in GenAI integration, agentic systems, and turning AI ideas into scalable products.',
+            knowsAbout: [
+              'Artificial Intelligence',
+              'Product Management',
+              'Generative AI',
+              'Agentic AI',
+              'AI Product Strategy',
+              'LLMs',
+              'Machine Learning',
+            ],
           }),
         }}
       />
