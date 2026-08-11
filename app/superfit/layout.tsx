@@ -34,6 +34,9 @@ export const metadata: Metadata = {
       },
     ],
   },
+  verification: {
+    google: 'zfoIroNXlntCOeaWxirwZzbN2Mxclz49GGSykeZahMs',
+  },
 };
 
 export default function SuperfitLayout({

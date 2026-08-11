@@ -40,6 +40,9 @@ export const metadata: Metadata = {
     description: 'AI Product Manager specializing in GenAI integration, agentic systems, and scalable AI product strategy.',
     images: ['/neetish.jpg'],
   },
+  verification: {
+    google: 'zfoIroNXlntCOeaWxirwZzbN2Mxclz49GGSykeZahMs',
+  },
 };
 
 export default function RootLayout({
