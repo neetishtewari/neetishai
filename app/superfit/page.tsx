@@ -308,12 +308,14 @@ export default function SuperfitLandingPage() {
           >
             {theme === "light" ? "🌙" : "☀️"}
           </button>
-          <button 
-            onClick={handleOpenAlphaModal}
+          <a 
+            href="https://play.google.com/store/apps/details?id=com.superfit.aifitness"
+            target="_blank"
+            rel="noopener noreferrer"
             className={styles.btnBetaHeader}
           >
-            Join the Alpha
-          </button>
+            Get on Play Store ↗
+          </a>
         </div>
       </header>
 
@@ -358,7 +360,7 @@ export default function SuperfitLandingPage() {
         <section className={styles.hero}>
           <div className={styles.pillBadge}>
             <span className={styles.pillDot}></span>
-            <span>Multilingual AI • Google Play Closed Testing</span>
+            <span>Multilingual AI • Live on Google Play</span>
           </div>
 
           <h1 className={styles.heroHeadline}>
@@ -370,12 +372,14 @@ export default function SuperfitLandingPage() {
           </p>
 
           <div className={styles.heroActions}>
-            <button 
-              onClick={handleOpenAlphaModal}
+            <a 
+              href="https://play.google.com/store/apps/details?id=com.superfit.aifitness"
+              target="_blank"
+              rel="noopener noreferrer"
               className={styles.btnMainPrimary}
             >
-              Join the Alpha Testing <span>→</span>
-            </button>
+              Download on Google Play <span>↗</span>
+            </a>
             <a 
               href="#demo" 
               className={styles.btnMainSecondary}
@@ -850,9 +854,9 @@ export default function SuperfitLandingPage() {
 
           <div className={styles.faqDeck}>
             <details name="faq" className={styles.faqBox}>
-              <summary className={styles.faqQuestion}>How do I join the Google Play Alpha Testing?</summary>
+              <summary className={styles.faqQuestion}>Where can I download Superfit?</summary>
               <div className={styles.faqAnswer}>
-                Because Superfit is currently in Google Play Closed Alpha Testing, Google requires your Google Play email address to be allowlisted before the Play Store download link activates. Simply tap any "Join the Alpha" button on this page, enter your Google Play email, and we'll grant you access immediately.
+                Superfit is live on the Google Play Store! Click any "Download on Google Play" button on this page or search for Superfit on Google Play to install it directly on your Android phone.
               </div>
             </details>
 
@@ -871,9 +875,9 @@ export default function SuperfitLandingPage() {
             </details>
 
             <details name="faq" className={styles.faqBox}>
-              <summary className={styles.faqQuestion}>What happens when the app goes public? Do I need to reinstall?</summary>
+              <summary className={styles.faqQuestion}>Do I need a smartwatch to use Superfit?</summary>
               <div className={styles.faqAnswer}>
-                No reinstallation needed! When Superfit launches publicly on Google Play, your alpha build will seamlessly update to the production release through Google Play Store. All your local meal history, goals, and settings will remain completely intact.
+                No! Superfit works great on any modern Android phone. If you do wear a smartwatch connected to Health Connect, Superfit will automatically read your steps and sleep with zero extra effort.
               </div>
             </details>
           </div>
@@ -883,15 +887,17 @@ export default function SuperfitLandingPage() {
         <section className={styles.bottomCtaDeck}>
           <h2 className={styles.bottomCtaTitle}>Ready to hit your fitness goals?</h2>
           <p className={styles.bottomCtaSubtitle}>
-            Join our closed Google Play alpha testing and start tracking your meals and workouts in seconds.
+            Download Superfit on Google Play today and start tracking your meals and workouts in seconds.
           </p>
           <div style={{ display: "flex", gap: "1.25rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <button 
-              onClick={handleOpenAlphaModal}
+            <a 
+              href="https://play.google.com/store/apps/details?id=com.superfit.aifitness"
+              target="_blank"
+              rel="noopener noreferrer"
               className={styles.btnMainPrimary}
             >
-              Join the Alpha Testing <span>→</span>
-            </button>
+              Download on Google Play <span>↗</span>
+            </a>
             <a 
               href="https://github.com/neetishtewari/superfit" 
               target="_blank" 
