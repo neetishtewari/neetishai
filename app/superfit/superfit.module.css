@@ -144,6 +144,9 @@
 
 /* The tiltable inner layer — rotates on mouse move */
 .heroTiltLayer {
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
   transform-style: preserve-3d;
   transition: transform 0.12s ease-out;
   will-change: transform;
@@ -228,6 +231,7 @@
   background: var(--accent-cyan);
   opacity: 0.4;
   animation: particleDrift 12s ease-in-out infinite alternate;
+  pointer-events: none;
 }
 
 .particle:nth-child(1) {
@@ -577,6 +581,10 @@
 }
 
 .heroActions {
+  position: relative;
+  z-index: 25;
+  pointer-events: auto;
+  transform: translateZ(40px);
   display: flex;
   gap: 1.25rem;
   justify-content: center;
@@ -586,6 +594,8 @@
 
 .btnMainPrimary {
   position: relative;
+  z-index: 26;
+  pointer-events: auto;
   overflow: hidden;
   padding: 1.05rem 2.4rem;
   font-family: var(--font-heading), sans-serif;
@@ -613,6 +623,7 @@
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
   transition: left 0.6s ease;
+  pointer-events: none;
 }
 
 .btnMainPrimary:hover::before {
@@ -626,6 +637,9 @@
 }
 
 .btnMainSecondary {
+  position: relative;
+  z-index: 26;
+  pointer-events: auto;
   padding: 1.05rem 2.2rem;
   font-family: var(--font-heading), sans-serif;
   font-size: 1.05rem;
