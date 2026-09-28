@@ -116,7 +116,7 @@ export default function ProductLab() {
                             )}
                             {project.status === 'Live' && project.betaUrl && (
                                 <a href={project.betaUrl} target="_blank" rel="noopener noreferrer" className={styles.demoLink}>
-                                    {project.betaUrl.includes('play.google.com') ? 'Google Play Alpha ↗' : 'Get Beta Build (Firebase) ↗'}
+                                    {project.betaUrl.includes('play.google.com') ? 'Download from Google Play ↗' : 'Get Beta Build (Firebase) ↗'}
                                 </a>
                             )}
                             {project.githubUrl && (

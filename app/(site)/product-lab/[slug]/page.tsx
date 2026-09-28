@@ -99,7 +99,7 @@ export default async function ProjectDetail({ params }: Props) {
                     )}
                     {project.links.beta && (
                         <a href={project.links.beta} className={styles.linkButton} target="_blank" rel="noopener noreferrer">
-                            {project.links.beta.includes('play.google.com') ? 'Google Play Alpha ↗' : 'Get Beta Build (Firebase) ↗'}
+                            {project.links.beta.includes('play.google.com') ? 'Download from Google Play ↗' : 'Get Beta Build (Firebase) ↗'}
                         </a>
                     )}
                     {project.links.github && (
