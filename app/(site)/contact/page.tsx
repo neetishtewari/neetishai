@@ -4,24 +4,24 @@ import styles from './Contact.module.css';
 export default function Contact() {
     return (
         <div className={`container ${styles.contactContainer}`}>
-            <h1 className={styles.title}>Let&#39;s Connect</h1>
+            <h1 className={styles.title}>Say hello</h1>
             <p className={styles.intro}>
-                I am always open to discussing AI research, open-source projects, or industry trends.
+                If you&#39;re working on similar problems in AI products, I&#39;d like to hear from you.
             </p>
 
             <div className={styles.grid}>
                 <div className={styles.bookingSection}>
-                    <h2>Book a time</h2>
+                    <h2>Message me</h2>
                     <p>
-                        The easiest way to connect is to grab a 30-minute slot on my calendar.
+                        LinkedIn is the best place to reach me.
                     </p>
                     <a
-                        href="https://calendly.com/neetish-tewari/30min"
+                        href="https://www.linkedin.com/in/neetish/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className={styles.bookButton}
                     >
-                        Schedule 30 mins ↗
+                        Message on LinkedIn ↗
                     </a>
                 </div>
 

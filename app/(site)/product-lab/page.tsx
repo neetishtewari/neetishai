@@ -130,9 +130,9 @@ export default function ProductLab() {
             </div>
 
             <div className={styles.ctaSection}>
-                <h3>If any of these resonate with what you are trying to build or solve, let’s talk.</h3>
-                <p>I enjoy discussing ideas, exploring problems, and building things collaboratively.</p>
-                <a href="https://calendly.com/neetish-tewari/30min" target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>Let&#39;s Talk</a>
+                <h3>What I learn from these goes into my notes.</h3>
+                <p>I write about what worked, what didn&#39;t, and what I&#39;d do differently.</p>
+                <Link href="/thought-journal" className={styles.ctaButton}>Read the notes</Link>
             </div>
         </div>
     );

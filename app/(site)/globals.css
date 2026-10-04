@@ -1,13 +1,12 @@
 :root {
   /* Color Palette */
-  --background: #ffffff;
-  --foreground: #111111;
-  --text-secondary: #555555;
-  --accent: #2563eb;
-  /* A clean blue for CTAs */
-  --accent-hover: #1d4ed8;
-  --gray-light: #f3f4f6;
-  --border: #e5e7eb;
+  --background: #faf8f4;
+  --foreground: #16181d;
+  --text-secondary: #5b606b;
+  --accent: #c2410c;
+  --accent-hover: #9a3412;
+  --gray-light: #f1ede6;
+  --border: #e6e1d8;
 
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -22,22 +21,24 @@
   --radius-lg: 16px;
 
   /* Container */
-  --max-width: 1200px;
+  --max-width: 1088px;
 
   /* Component Specific */
-  --header-background: rgba(255, 255, 255, 0.9);
+  --header-background: rgba(250, 248, 244, 0.9);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     /* Optional dark mode support - keeping it subtle if needed, but PRD highlights light/white */
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --text-secondary: #a1a1a1;
-    --gray-light: #171717;
-    --border: #333333;
+    --background: #121316;
+    --foreground: #eceae5;
+    --text-secondary: #9ca0a8;
+    --accent: #fb8a4c;
+    --accent-hover: #fdba74;
+    --gray-light: #22252a;
+    --border: #2a2d33;
 
-    --header-background: rgba(10, 10, 10, 0.9);
+    --header-background: rgba(18, 19, 22, 0.9);
   }
 }
 
@@ -90,5 +91,11 @@ p {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 var(--spacing-sm);
+  padding: 0 24px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 16px;
+  }
 }

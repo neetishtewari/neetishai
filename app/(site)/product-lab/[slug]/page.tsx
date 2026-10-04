@@ -126,8 +126,8 @@ export default async function ProjectDetail({ params }: Props) {
             </div>
 
             <div className={styles.cta}>
-                <h3>Interested in something like this?</h3>
-                <a href="https://calendly.com/neetish-tewari/30min" target="_blank" rel="noopener noreferrer" className={styles.ctaLink}>Let&#39;s discuss <span className={styles.arrow}>→</span></a>
+                <h3>See what else I&#39;ve been building.</h3>
+                <Link href="/product-lab" className={styles.ctaLink}>Back to the lab <span className={styles.arrow}>→</span></Link>
             </div>
         </div>
     );
