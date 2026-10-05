@@ -20,10 +20,10 @@ export default function Header() {
 
                 {/* Desktop Nav */}
                 <nav className={styles.nav}>
-                    <Link href="/interests" className={styles.link}>Interests</Link>
+                    <Link href="/#work" className={styles.link}>Work</Link>
                     <Link href="/product-lab" className={styles.link}>Product Lab</Link>
                     <Link href="/thought-journal" className={styles.link}>Thought Journal</Link>
-                    <a href="https://calendly.com/neetish-tewari/30min" target="_blank" rel="noopener noreferrer" className={styles.cta}>Let&#39;s Connect</a>
+                    <a href="https://www.linkedin.com/in/neetish/" target="_blank" rel="noopener noreferrer" className={styles.cta}>LinkedIn</a>
                 </nav>
 
                 {/* Mobile Menu Button */}
@@ -34,10 +34,10 @@ export default function Header() {
                 {/* Mobile Nav Overlay */}
                 <div className={`${styles.mobileNav} ${isMenuOpen ? styles.open : ''}`}>
                     <nav className={styles.mobileLinks}>
-                        <Link href="/interests" className={styles.mobileLink} onClick={toggleMenu}>Interests</Link>
+                        <Link href="/#work" className={styles.mobileLink} onClick={toggleMenu}>Work</Link>
                         <Link href="/product-lab" className={styles.mobileLink} onClick={toggleMenu}>Product Lab</Link>
                         <Link href="/thought-journal" className={styles.mobileLink} onClick={toggleMenu}>Thought Journal</Link>
-                        <a href="https://calendly.com/neetish-tewari/30min" target="_blank" rel="noopener noreferrer" className={styles.mobileCta} onClick={toggleMenu}>Let&#39;s Talk</a>
+                        <a href="https://www.linkedin.com/in/neetish/" target="_blank" rel="noopener noreferrer" className={styles.mobileCta} onClick={toggleMenu}>LinkedIn</a>
                     </nav>
                 </div>
             </div>

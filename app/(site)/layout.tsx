@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -7,14 +7,16 @@ import ChatWidget from "@/components/ChatWidget";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-serif", weight: ["500", "600"] });
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", weight: ["400", "500"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://neetishtewari.co"),
   title: {
     template: '%s | Neetish Tewari',
-    default: 'Neetish Tewari | AI Product Manager & Strategy Consultant',
+    default: 'Neetish Tewari | AI Product Manager',
   },
-  description: "AI Product Manager with 17+ years in product strategy. Specializing in GenAI integration, agentic systems, and turning AI ideas into scalable products.",
+  description: "AI Product Manager with 18 years in product. Launched startup products from zero, one acquired. Builds AI apps around problems he spots and writes about evals, agents and document AI.",
   alternates: {
     canonical: 'https://neetishtewari.co',
   },
@@ -22,8 +24,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://neetishtewari.co',
-    title: 'Neetish Tewari | AI Product Manager & Strategy Consultant',
-    description: 'AI Product Manager specializing in GenAI integration, agentic systems, and scalable AI product strategy.',
+    title: 'Neetish Tewari | AI Product Manager',
+    description: 'AI Product Manager with 18 years in product. Launched startup products from zero, one acquired. Still builds.',
     siteName: 'Neetish Tewari',
     images: [
       {
@@ -36,8 +38,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Neetish Tewari | AI Product Manager & Strategy Consultant',
-    description: 'AI Product Manager specializing in GenAI integration, agentic systems, and scalable AI product strategy.',
+    title: 'Neetish Tewari | AI Product Manager',
+    description: 'AI Product Manager with 18 years in product. Launched startup products from zero, one acquired. Still builds.',
     images: ['/neetish.jpg'],
   },
   verification: {
@@ -52,7 +54,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.variable}>
+      <body className={`${inter.variable} ${fraunces.variable} ${jetbrainsMono.variable}`}>
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-T9SQGDXMWB"
