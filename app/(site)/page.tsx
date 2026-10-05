@@ -4,13 +4,6 @@ import LiveFeed from '@/components/LiveFeed';
 import { getAllPosts, Post } from '@/lib/posts';
 import styles from './page.module.css';
 
-const STATS = [
-  { value: '18 yrs', label: 'building products across edtech, fintech, document automation and analytics' },
-  { value: '93%', label: 'less document processing time with multi-agent workflows' },
-  { value: '$6-7M', label: 'weekly payment volume on a platform later acquired' },
-  { value: '95%', label: 'fraud-detection accuracy on 500K+ invoices a month' },
-];
-
 const TRACK_RECORD = [
   {
     when: '2025 – now',
@@ -160,17 +153,6 @@ export default async function Home() {
           <LiveFeed limit={4} showLink={true} />
         </aside>
       </header>
-
-      <div className="container">
-        <div className={styles.stats}>
-          {STATS.map((s) => (
-            <div key={s.value} className={styles.stat}>
-              <div className={styles.statValue}>{s.value}</div>
-              <div className={styles.statLabel}>{s.label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
 
       <div className="container">
         {/* Track record */}
