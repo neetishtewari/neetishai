@@ -5,7 +5,7 @@ import { getAllPosts, Post } from '@/lib/posts';
 import styles from './page.module.css';
 
 const STATS = [
-  { value: '17 yrs', label: 'building products across SaaS, fintech, EdTech and AI' },
+  { value: '18 yrs', label: 'building products across edtech, fintech, document automation and analytics' },
   { value: '93%', label: 'less document processing time with multi-agent workflows' },
   { value: '$6-7M', label: 'weekly payment volume on a platform later acquired' },
   { value: '95%', label: 'fraud-detection accuracy on 500K+ invoices a month' },
@@ -135,14 +135,14 @@ export default async function Home() {
         <div className={styles.heroMain}>
         <div className={styles.heroTop}>
           <Image src="/neetish.jpg" alt="Neetish Tewari" width={64} height={64} className={styles.avatar} priority />
-          <p className={styles.eyebrow}>AI Product Manager · 17 years in product</p>
+          <p className={styles.eyebrow}>AI Product Manager · 18 years in product</p>
         </div>
         <h1 className={styles.title}>I turn AI ideas into products people use.</h1>
         <p className={styles.lede}>
-          I&apos;ve launched startup products from zero, including a payments platform that was{' '}
-          <b>acquired by CardUp</b>, and led AI teams that cut document processing time by <b>93%</b>. Outside
-          work, whenever I spot a problem, I build an AI app around it to learn what holds up. This site is where
-          those experiments and notes live.
+          I&apos;ve spent <b>18 years building products</b> across edtech, fintech, document automation and
+          analytics platforms, launching several startup products from zero and leading AI teams along the way.
+          Outside work, whenever I spot a problem, I build an AI app around it to learn what holds up. This site is
+          where those experiments and notes live.
         </p>
         <div className={styles.ctaGroup}>
           <Link href="/product-lab" className={`${styles.btn} ${styles.btnPrimary}`}>
@@ -353,7 +353,7 @@ export default async function Home() {
               'https://github.com/neetishtewari',
             ],
             description:
-              'AI Product Manager with 17 years in product. Launched startup products from zero, one acquired. Builds AI apps around problems he spots.',
+              'AI Product Manager with 18 years in product. Launched startup products from zero, one acquired. Builds AI apps around problems he spots.',
             knowsAbout: [
               'Artificial Intelligence',
               'Product Management',

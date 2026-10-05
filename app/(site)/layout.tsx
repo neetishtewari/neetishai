@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: '%s | Neetish Tewari',
     default: 'Neetish Tewari | AI Product Manager',
   },
-  description: "AI Product Manager with 17 years in product. Launched startup products from zero, one acquired. Builds AI apps around problems he spots and writes about evals, agents and document AI.",
+  description: "AI Product Manager with 18 years in product. Launched startup products from zero, one acquired. Builds AI apps around problems he spots and writes about evals, agents and document AI.",
   alternates: {
     canonical: 'https://neetishtewari.co',
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://neetishtewari.co',
     title: 'Neetish Tewari | AI Product Manager',
-    description: 'AI Product Manager with 17 years in product. Launched startup products from zero, one acquired. Still builds.',
+    description: 'AI Product Manager with 18 years in product. Launched startup products from zero, one acquired. Still builds.',
     siteName: 'Neetish Tewari',
     images: [
       {
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Neetish Tewari | AI Product Manager',
-    description: 'AI Product Manager with 17 years in product. Launched startup products from zero, one acquired. Still builds.',
+    description: 'AI Product Manager with 18 years in product. Launched startup products from zero, one acquired. Still builds.',
     images: ['/neetish.jpg'],
   },
   verification: {
