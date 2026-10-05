@@ -5,10 +5,10 @@ import { getAllPosts, Post } from '@/lib/posts';
 import styles from './page.module.css';
 
 const STATS = [
-  { value: '18 yrs', label: 'building products across edtech, fintech, document automation and analytics' },
-  { value: '93%', label: 'less document processing time with multi-agent workflows' },
-  { value: '$6-7M', label: 'weekly payment volume on a platform later acquired' },
-  { value: '95%', label: 'fraud-detection accuracy on 500K+ invoices a month' },
+  { value: '18 yrs', label: 'building products, from early-stage startups to enterprise platforms' },
+  { value: '3', label: 'startup products launched from zero, one of them acquired' },
+  { value: '4', label: 'industries: edtech, fintech, document automation and analytics' },
+  { value: '15+', label: 'person product and AI teams led' },
 ];
 
 const TRACK_RECORD = [
